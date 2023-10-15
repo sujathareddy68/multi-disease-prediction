@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            text-align: center; /* Center-align text in the body */
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: teal;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: lucida;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-family:goudy stout;">Prediction Result</h1>
+    {% if pred is defined %}
+        {% if pred == 1 %}
+            <p style="font-family:lucida calligraphy; font-size: 30px; color: green;">Person is healthy.</p>
+        {% elif pred == 0 %}
+            <p style="font-family:lucida calligraphy; font-size: 30px; color: red;">Person is not healthy.</p>
+        {% endif %}
+    {% elif message is defined %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <a class="button" href="/" style="font-family:matura MT script capitals;" >Back to home</a>
+</body>
+</html>

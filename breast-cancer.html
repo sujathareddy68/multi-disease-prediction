@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Predictor</title>
+    <style>
+        body {
+            background-image: url(./static/cancer.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height:100 vh;
+            margin: 0;
+        }
+
+        .form-container {
+            max-width: 1000px; /* Set a max width to limit the form width */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .columns-container {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .column {
+            flex: 1; /* Equal width columns */
+            margin: 0 10px; /* Margin between columns */
+        }
+
+        .column input {
+            width: 100%; /* Full width for each input */
+            padding: 8px; /* Adding some padding for better visual appearance */
+            box-sizing: border-box; /* Including padding in the input's total width */
+            margin-bottom: 10px; /* Adjusted margin */
+        }
+
+        button {
+            width: 100%; /* Make the button take the full width */
+            padding: 10px;
+            background-color: teal;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Breast Cancer Predictor</h1>
+    <form action = "/predict" method="post">
+    <div class="form-container">
+        <div class="columns-container">
+            <div class="column">
+                <input type="text" name="fractal_dimension_se" placeholder="fractal_dimension_se">
+                <input type="text" name="comapctness_worst" placeholder="comapctness_worst">
+                <input type="text" name="symmetry_worst" placeholder="symmetry_worst">
+                <input type="text" name="smoothness_se" placeholder="smoothness_se">
+                <input type="text" name="concave_points_worst" placeholder="concave_points_worst">
+                <input type="text" name="texture_mean" placeholder="texture_mean">
+            </div>
+
+            <div class="column">
+                <input type="text" name="smoothness_mean" placeholder="smoothness_mean">
+                <input type="text" name="concave_points_mean" placeholder="concave_points_mean">
+                <input type="text" name="concavity_se" placeholder="concavity_se">
+                <input type="text" name="area_worst" placeholder="area_worst">
+                <input type="text" name="concavity_worst" placeholder="concavity_worst">
+                <input type="text" name="fractal_dimension_worst" placeholder="fractal_dimension_worst">
+            </div>
+
+            <div class="column">
+                <input type="text" name="compactness_mean" placeholder="compactness_mean">
+                <input type="text" name="symmetry_mean" placeholder="symmetry_mean">
+                <input type="text" name="area_se" placeholder="area_se">
+                <input type="text" name="concave_points_se" placeholder="concave_points_se">
+                <input type="text" name="texture_worst" placeholder="texture_worst">
+                <input type="text" name="smoothness_worst" placeholder="smoothness_worst">
+                
+            </div>
+        </div>
+
+        <button type="Predict">Predict</button>
+    
+    </div>
+</form>
+</body>
+</html>

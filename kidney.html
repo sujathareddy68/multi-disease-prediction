@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with 6x3 Text Fields</title>
+    <style>@keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  
+      /* Apply the animation to the heading */
+      h1 {
+        animation: slideIn 1s ease-in-out;
+      }
+        body {
+            background-image: url(./static/kidneyimage.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 800px;
+            height: 100vh;
+            margin: 30px;
+            overflow: hidden;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1{
+
+            background-color: crimson;
+            color:white;
+            margin-top: -15%;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        button {
+            box-shadow: 0 0 5px cyan,
+            0 0 25px cyan;
+            
+           
+            grid-column: span 3; /* Make the button span all 3 columns */
+            width: 100%;
+            padding: 10px;
+    
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            box-shadow:0 0 5px cyan,
+            0 0 25px cyan, 0 0 50px cyan,
+            0 0 100px cyan, 0 0 200px cyan;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <li>
+    <li>
+    <h1>Kidney Disease Predictor</h1>
+
+
+    <form action="/predict" method="post">
+        <input type="text" name="Age" placeholder="Age">
+        <input type="text" name="bp" placeholder="bp">
+        <input type="text" name="al" placeholder="al">
+        
+        <input type="text" name="su" placeholder="su">
+        <input type="text" name="rbc" placeholder="rbc">
+        <input type="text" name="pc" placeholder="pc">
+        
+        <input type="text" name="pcc" placeholder="pcc">
+        <input type="text" name="ba" placeholder="ba">
+        <input type="text" name="bgr" placeholder="bgr">
+        
+        <input type="text" name="bu" placeholder="bu">
+        <input type="text" name="sc" placeholder="sc">
+        <input type="text" name="pot" placeholder="pot">
+        
+        <input type="text" name="wc" placeholder="wc">
+        <input type="text" name="htn" placeholder="htn">
+        <input type="text" name="dm" placeholder="dm">
+        
+        <input type="text" name="cad" placeholder="cad">
+        <input type="text" name="pe" placeholder="pe">
+        <input type="text" name="ane" placeholder="ane">
+
+        <button type="predict">Predict</button>
+    </form>
+</body>
+</html>

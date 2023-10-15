@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Symptoms</title>
+    <style>
+        /* CSS for the menu bar */
+        body{
+            background-color:rgba(199, 177, 177, 0.514);
+        }
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        ul.menu li {
+            float: left;
+        }
+
+        ul.menu li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.menu li a:hover {
+            background-color: #444;
+        }
+
+        /* Clear floating elements after the menu */
+        .menu:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #heading{
+            height: 400px;
+            /* background-image: linear-gradient(75deg,rgb(24, 189, 255),rgb(37, 37, 228),green,yellow,yellow,orange,orangered,red,red,orangered,orange,yellow,yellow,green,rgb(37, 37, 228),rgb(24, 189, 255)); */
+            background-image: linear-gradient(75deg,violet,indigo,aqua,aqua,rgb(24, 189, 255),rgb(37, 37, 228),green,yellow,yellow,yellow,yellow,green,rgb(37, 37, 228),rgb(24, 189, 255),aqua,aqua,indigo,violet);
+            background-size: 400%;
+            background-position: 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textAnimate 20s ease-in infinite;
+            
+        }
+        @keyframes textAnimate {
+        from{
+             background-position: 400%;
+         }
+        to{
+            background-position: 0%;
+        }
+    }
+    #headingsec{
+        width: 80%;
+    height: 100%;
+        /* border-radius: 5px;
+        box-shadow: 5px 5px 10px 5px black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    #sec1,#sec3{
+    background-color:rgba(222, 184, 135, 0.438);
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+#sec3{
+    background-color:rgba(241, 75, 75, 0.438);
+}
+#sec2,#sec4{
+    background-color:rgba(253, 101, 220, 0.308);
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+#sec4{
+    background-color:rgba(75, 202, 241, 0.438);
+}
+.right,.left{
+    width: 80%;
+    height: 100%;
+    background-color: black;
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 31% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 31% 100%);
+    position: absolute;
+    right: 0px;
+}
+.rightImg{
+    width: 100%;
+    height: 100%;
+    left: 170px;
+    position: absolute;
+    z-index: 3;
+}
+.rightImgbr{
+    width: 100%;
+    height: 100%;
+    left: 150px;
+    position: absolute;
+    z-index: 1;
+}
+.rightImgliv,.rightImgkid{
+    width: 100%;
+    height: 100%;
+    left: 250px;
+    position: absolute;
+    z-index: 1;
+    
+}
+.backVideo{
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    
+}
+@media(min-aspect-ratio:16/9){
+    .backVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .backVideo{
+        width: auto;
+        height: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/diabetes">Diabetes</a></li>
+        <li><a href="/cancer">Breast Cancer</a></li>
+        <li><a href="/heart">Heart Disease</a></li>
+        <li><a href="/liver">Liver Disease</a></li>
+        <li><a href="/kidney">Kidney Disease</a></li>
+        <!-- Add more menu items as needed -->
+    </ul>
+    <div id="headingsec">
+        <video autoplay loop muted plays-inline class="backVideo">
+            <source src="./static/index2.mp4" type="video/mp4">
+        </video>
+        <h1 id="heading" style="font-family:Harrington; text-align: center; font-size:110px;">Welcome <br> to the <br>Disease Symptoms Portal</h1>
+    </div>
+    <br><br>
+    <h2 style="font-family:copperplate gothic bold;font-size: 40px;color: rgb(155, 2, 2);letter-spacing: 2px;background-color: burlywood;">Diseases and Symptoms:</h2>
+<!-- mytext -->
+<section id="sec1">
+    <div class="right">
+        <img class="rightImg" src="./static/diabetes1.jpg" alt="">
+    </div>
+    <h3 style="font-family:copperplate gothic bold;font-size: 40px;color: rgb(255, 11, 60);letter-spacing: 1px;">Diabetes</h3>
+            <p style="font-family:lucida calligraphy;">It is a disease that occurs when your blood glucose, also called blood sugar, is too high. <br>Blood glucose is your main source of energy and comes from the food you eat. <br>Insulin, a hormone made by the pancreas, helps glucose from food get <br> into your cells to be used for energy.</p>
+            <h3 style="font-family:copperplate gothic bold; ">Symptoms of Diabetes:</h3>
+            <ul>
+                <li style="font-family:lucida calligraphy;">Increased thirst and hunger</li>
+                <li style="font-family:lucida calligraphy;">Frequent urination</li>
+                <li style="font-family:lucida calligraphy;">Unexplained weight loss</li>
+                <li style="font-family:lucida calligraphy;">Fatigue</li>
+                <li style="font-family:lucida calligraphy;">Blurred vision</li>
+            </ul>
+        
+</section>
+<!-- breast cancer -->
+<section id="sec2">
+    <div class="left">
+        <img class="rightImgbr" src="./static/breastcancer1.jpg" alt="">
+    </div>
+        <h3 style="font-family:copperplate gothic bold;font-size: 40px;color: rgb(243, 0, 113)">Breast Cancer</h3>
+        <p style="font-family:lucida calligraphy;">It is a cancer that forms in the cells of the breast. After skin cancer, <br>breast cancer is the most common cancer diagnosed in women in the US. <br> Breast cancer can occur in both men and women, <br> but it's far more common in women.</p>
+        <h3 style="font-family:copperplate gothic bold;">Symptoms of Breast Cancer:</h3>
+        <ul>
+            <li style="font-family:lucida calligraphy;">Breast lump or thickening</li>
+            <li style="font-family:lucida calligraphy;">Change in breast size or shape</li>
+            <li style="font-family:lucida calligraphy;">Nipple discharge other than breast milk</li>
+            <li style="font-family:lucida calligraphy;">Redness or pitting of the breast skin</li>
+            <li style="font-family:lucida calligraphy;">Changes in the skin over the breast</li>
+        </ul>
+</section>
+
+<!-- Heart -->
+<section id="sec3">
+    <div class="left">
+        <img class="rightImgbr" src="./static/heart1.jpg" alt="">
+    </div>
+    <div>
+        <h3 style="font-family:copperplate gothic bold;font-size: 40px;color: rgb(218, 10, 10)">Heart Disease</h3>
+            <p style="font-family:lucida calligraphy;">Heart disease, or cardiovascular disease, <br> refers to conditions affecting the heart and blood vessels, <br> often caused by factors like poor diet, smoking, and high blood pressure.</p>
+            <h3 style="font-family:copperplate gothic bold;">Symptoms of Heart Disease:</h3>
+            <ul>
+                <li style="font-family:lucida calligraphy;">Chest pain or discomfort</li>
+                <li style="font-family:lucida calligraphy;">Shortness of breath</li>
+                <li style="font-family:lucida calligraphy;">Fatigue</li>
+                <li style="font-family:lucida calligraphy;">Rapid or irregular heartbeat</li>
+                <li style="font-family:lucida calligraphy;">Dizziness or fainting</li>
+            </ul>
+</section>
+
+<!-- liver -->
+<section id="sec2">
+    <div class="left">
+        <img class="rightImgliv" src="./static/liver1.jpg" alt="">
+    </div>
+    <h3 style="font-family:copperplate gothic bold;font-size: 40px;color:rgb(170, 22, 22)">Liver Disease</h3>
+            <p style="font-family:lucida calligraphy;">Liver disease encompasses a range of conditions that affect the liver's structure <br>and function, leading to potential liver damage.It can be caused by various factors,<br> including viral infections (like hepatitis), excessive alcohol consumption, <br>fatty liver disease, and genetics.</p>
+            <h3 style="font-family:copperplate gothic bold;">Symptoms of Liver Disease:</h3>
+            <ul>
+                <li style="font-family:lucida calligraphy;">Jaundice</li>
+                <li style="font-family:lucida calligraphy;">Fatigue</li>
+                <li style="font-family:lucida calligraphy;">Abdominal Pain</li>
+                <li style="font-family:lucida calligraphy;">Swelling and Fluid Retention</li>
+                <li style="font-family:lucida calligraphy;">Nausea and Vomiting</li>
+            </ul>
+    </section>
+<!-- kidney -->
+<section id="sec4">
+    <div class="left">
+        <img class="rightImgkid" src="./static/kidney1.jpg" alt="">
+    </div>
+    <h3 style="font-family:copperplate gothic bold;font-size: 40px;color: rgb(22, 120, 185)">Kidney Disease</h3>
+    <p style="font-family:lucida calligraphy;">Kidney disease encompasses various conditions affecting kidney function,<br> which can lead to waste buildup and electrolyte imbalances. <br>Treatment may involve interventions like dialysis or <br>transplantation in severe cases.</p>
+    <h3 style="font-family:copperplate gothic bold;">Symptoms of Kidney Disease:</h3>
+    <ul>
+        <li style="font-family:lucida calligraphy;">Fatigue and weakness.</li>
+        <li style="font-family:lucida calligraphy;">Swelling in the legs, ankles, feet, or face (edema).</li>
+        <li style="font-family:lucida calligraphy;">Shortness of breath.</li>
+        <li style="font-family:lucida calligraphy;">Persistent itching.</li>
+        <li style="font-family:lucida calligraphy;">Foamy or bloody urine.</li>
+    </ul>    
+</section>
+    <!-- shivani -->
+</body>
+</html>

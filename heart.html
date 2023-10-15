@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Health Information</title>
+    <style>
+        body {
+             /* Replace 'your-background-image.jpg' with the path or URL of your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: #fff; /* Set text color to white for better visibility */
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 600px; /* Set a max width to limit the form width */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the form for better readability */
+        }
+
+        input {
+            margin-bottom: 15px;
+            width: 48%; /* Adjust width for two columns with a small gap between them */
+            padding: 8px; /* Adding some padding for better visual appearance */
+            box-sizing: border-box; /* Including padding in the input's total width */
+        }
+
+        button {
+            width: 100%; /* Make the button take the full width */
+            padding: 10px;
+            background-color: teal; /* Change the background color to teal */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%; /* Set the image to take the full width of its container */
+            max-width: 600px; /* Adjust the max width as needed */
+            margin-bottom: 20px;
+        }
+        h1{
+
+            
+            color:white;
+            margin-top: -15%;
+        }
+        video{
+            width: 100vh;
+            height: 500px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <video id="heartVideo" src="./static/heartvideo.mp4" autoplay loop muted ></video>
+    
+    <form action="/predict" method="post">
+        <h1>Heart Disease Predictor</h1>
+        
+        <input type="text" id="age" name="age" placeholder="Age">
+
+        <input type="text" id="sex" name="sex" placeholder="Sex (1 for Male, 2 for Female)">
+
+        <input type="text" id="chest Pain Type" name="chest Pain Type" placeholder="Chest Pain Type">
+
+        <input type="text" id="resting_blood_pressure" name="resting_blood_pressure" placeholder="Resting Blood Pressure (mm Hg)">
+
+        <input type="text" id="serum_cholesterol" name="serum_cholesterol" placeholder="Serum Cholesterol (mg/dL)">
+
+        <input type="text" id="fasting_blood_sugar" name="fasting_blood_sugar" placeholder="Fasting Blood Sugar 120mg/dl(1=True,0=False)">
+
+        <input type="text" id="resting_electrocardiographic_results" name="resting_electrocardiographic_results" placeholder="Resting Electrocardiographic Results">
+
+        <input type="text" id="max_heart_rate_achieved" name="max_heart_rate_achieved" placeholder="Maximum Heart Rate Achieved">
+
+        <input type="text" id="exerciseAngina" name="exerciseAngina" placeholder="Exercise Induced Angina (1=Yes, 0=No)">
+
+        <input type="text" id="stDepression" name="stDepression" placeholder="ST Depression Induced by Exercise">
+
+        <input type="text" id="slopeST" name="slopeST" placeholder="Slope of the Peak Exercise ST Segment">
+
+        <input type="text" id="numVessels" name="numVessels" placeholder="Number of Major Vessels Colored (0-3)">
+
+        <input type="text" id=" " name=" " placeholder=" (3=Normal, 6=Fixed Defect, 7=Recovery)">
+
+        <button type="Predict">Predict</button>
+    </form>
+   
+    
+</body>
+</html>

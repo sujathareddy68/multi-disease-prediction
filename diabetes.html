@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Style for the blue button */
+    .teal-button {
+      background-color: teal;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    /* Optional style for spacing */
+    body {
+        background-image: url(./static/diabetes.webp); /* Replace 'your-background-image.jpg' with the path or URL of your background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 20px;
+        text-align: center;
+        width: 700px;
+        height: 700px;/* Align text to center */
+    }
+    .form-container {
+      display: inline-block;
+      text-align: left;
+      padding: 20px;
+      border: 2px solid gray;
+      border-radius: 10px; /* Optional: Adds rounded corners to the box */
+    }
+    .form-container input {
+      width: 100%; /* Set the width to 100% of the container */
+      height: 40px; /* Adjusted height */
+      margin-bottom: 15px; /* Adjusted margin for spacing */
+      padding: 10px; /* Adjusted padding */
+      box-sizing: border-box; /* Include padding and border in the width and height */
+    }
+    h1{
+            margin-left: 0%;
+            background-color:navy;
+            color: whitesmoke;
+        }
+  </style>
+</head>
+<body>
+
+<h1>Diabetes Predictor</h1>
+
+<!-- Form container to center the form -->
+<div class="form-container">
+  <form action="/predict" method="post">
+    <!-- 8 text fields -->
+    <input type="text" name="pregnancies" placeholder="No. of pregnancies eg. 0" style="width: 500px"><br>
+    <input type="text" name="glucose" placeholder="Glucose (mg/dl) eg. 80"><br>
+    <input type="text" name="blood_pressure" placeholder="Blood pressure(mm/Hg) eg. 80"><br>
+    <input type="text" name="skin_thickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+    <input type="text" name="insulin_level" placeholder="Insulin Level(Iu/mL) eg. 80"><br>
+    <input type="text" name="bmi" placeholder="BodyMassIndex(kg/m²) eg. 23.1"><br>
+    <input type="text" name="diabetes_pedigree" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+    <input type="text" name="age" placeholder="Age (years) eg. 24"><br>
+
+    <!-- Blue-colored button -->
+  
+    <button class="teal-button" style="width:500px" type="Predict">Predict</button>
+
+  </form>  
+
+</div>
+
+</body>
+</html>
