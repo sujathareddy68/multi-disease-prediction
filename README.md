@@ -11,14 +11,17 @@ The multiple diseases predicted are:
     5. Kidney Disease
 Each disease have separate dataset
 
-#Deployment model
+Deployment model
+
 FLASK
+
 ->It is a lightweight and versatile web framework for Python.
+
 ->It is suitable for building simple to moderately complex web
     applications, including those that serve machine learning
     models.
     
-#Packages and Tools
+Packages and Tools
 
     1.Pandas 
     2. Numpy 
